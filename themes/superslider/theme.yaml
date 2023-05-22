@@ -1,0 +1,86 @@
+name: "Superslider"
+description: "My Theme Description"
+author: ""
+homepage: ""
+code: ""
+
+form:
+    tabs:
+        fields:
+            logo_text:
+                label: Компания
+                span: auto
+                comment: Введите название вашей компании
+                tab: Основные
+            logo_image:
+                label: Логотип
+                type: mediafinder
+                mode: image
+                tab: Основные
+                span: auto
+            phone:
+                label: Телефон
+                tab: Основные
+                span: auto
+            address:
+                label: Адрес
+                tab: Основные
+                span: auto
+            soc:
+                label: Социальные сети
+                comment: Социальные сети компаний
+                type: repeater
+                span: auto
+                tab: Основные
+                form:
+                    fields:
+                        image:
+                            label: Логотип социальной сети
+                            type: mediafinder
+                            mode: image
+                            span: auto
+                            imageWidth: 100
+                        link:
+                            label: Ссылка на страницу
+                            span: auto
+            share:
+                label: Шеринг в соц. сетях
+                comment: Ссылки на шеринг
+                type: repeater
+                span: auto
+                tab: Основные
+                form:
+                    fields:
+                        image:
+                            label: Логотип социальной сети
+                            type: mediafinder
+                            mode: image
+                            span: auto
+                            imageWidth: 100
+                        link:
+                            label: Ссылка на страницу
+                            span: auto
+            landing_1_title:
+                label: Заголовок лендинга
+                comment: Введите заголовок
+                tab: Лендинг "Агат"
+            landing_1_description:
+                label: Описание
+                type: textarea
+                comment: Введите описание
+                tab: Лендинг "Агат"
+            landing_1_slider:
+                label: Слайдер
+                type: repeater
+                tab: Лендинг "Агат"
+                form:
+                    fields:
+                        image:
+                            label: Изображение
+                            type: mediafinder
+                            mode: image
+                        header:
+                            label: Заголовок слайда
+                        description:
+                            type: textarea
+                            label: Описание

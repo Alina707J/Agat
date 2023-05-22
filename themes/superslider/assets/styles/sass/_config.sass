@@ -1,0 +1,66 @@
+// USER VARIABLES SECTION
+
+$accent: #FDAE55 // Accent Color
+$accent2: #20152C
+$accent3: #633E5A
+$accent4: #CB95AA
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$lineheight: 1.7 // Document Line Height
+$userfont: Lato-ag, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$size: 70px
+$size-sm: 58px
+$border-opacity: .1
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/swiper/swiper-bundle'
+@import 'themes/superslider/vendor/micromodal/micromodal'
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('Lato-ag', normal, 400, '../fonts/Lato-Regular.woff2')
+@include font('Lato-ag', normal, 500, '../fonts/Lato-Medium.woff2')
+@include font('Lato-ag', normal, 700, '../fonts/Lato-Bold.woff2')
+
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
